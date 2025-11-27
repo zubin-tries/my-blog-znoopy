@@ -1,0 +1,46 @@
+---
+# The frontmatter block is surrounded by '---'
+title: My First Successful Astro Deployment!
+description: A quick reflection on setting up my blog on GitHub Pages.
+author: Zubin
+pubDate: 2025-11-26
+# You can use a local image, e.g., 'src/assets/my-image.jpg'
+heroImage: /placeholder-social.jpg 
+tags: ["astro", "github", "tutorial"]
+---
+
+## The Deployment Journey
+
+It took a few steps, but we got there! The main issues were:
+
+1.  **Astro `base` configuration** to match the repository name (`/my-blog-znoopy`).
+2.  **Disabling Jekyll** with the `.nojekyll` file.
+3.  **Ensuring the `docs/` (or `dist/`) folder** was pushed to GitHub.
+4.  **Selecting the correct folder** in the GitHub Pages settings.
+
+Now that the pipeline is set up, blogging will be much smoother!
+
+---
+
+### 3. Deploying Your New Post
+
+Astro automatically handles updating the index and RSS feed when you create a new Markdown file.
+
+1.  **Build the site** to create the new static files:
+    ```bash
+    npm run build
+    ```
+    (This updates the files inside your `docs/` folder.)
+2.  **Commit the new content** and the updated build output:
+    ```bash
+    git add -A
+    git commit -m "feat: added first blog post"
+    ```
+3.  **Push to GitHub** to trigger the deployment:
+    ```bash
+    git push origin master
+    ```
+
+Once the GitHub Action completes (green checkmark), your new post will be live on your site!
+
+Would you like me to help you find an image for your blog post, or do you have any questions about writing in Markdown?
