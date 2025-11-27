@@ -10,5 +10,6 @@ export default defineConfig({
   
 	// (Highly Recommended) Set the full URL for your live site
 	site: 'https://zubin-tries.github.io',
+	trailingSlash: 'always',
 	integrations: [mdx(), sitemap()],
 });
